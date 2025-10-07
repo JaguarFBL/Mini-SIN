@@ -1,4 +1,20 @@
 # SIN
+Consignes générales :
+--------------
+Toutes vos travaux  doivent faire l’objet d’un compte rendu  rédigé et sauvegardé dans un dossier par binôme. Les différentes  versions de  vos projets Proteus seront identifiées et sauvegardées dans un dossier dans vos espaces personnels et remis dans le devoir sous Teams.
+Merci de déposer un dossier zippé comprenant :
+Un compte rendu des activités réalisées en conservant le plan du document Word ci joint
+Chacun de vos projets Proteus renommé avec sa version 
+V1: 1 cycle de convoyage
+V2: 3 cycles de convoyages
+V3.1 : Intégration de sons 
+V3.2: création de fonctions
+
+Veiller à  réutiliser parfaitement le vocabulaire technique utilisé dans l’énoncé.
+
+Entrée/Sortie :
+--------------
+
 
 V1 objectifs :
 --------------
