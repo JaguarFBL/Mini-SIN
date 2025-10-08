@@ -28,9 +28,9 @@ V2 objectifs :
 --------------
 
 Compléter votre programme V2 pour que : 
--	Le chariot étant au point A, une impulsion sur le bouton poussoir DCY permet d'effectuer 3 allers-retours, entre les points A et B.
--	A chaque extrémité, A ou B, le chariot reste immobilisé 4 secondes pour chargement ou déchargement.
--	Le moniteur série doit afficher en permanence les états du chariot ainsi que le nombre d'aller-retour effectués
+-	Le chariot étant au point A, une impulsion sur le bouton poussoir DCY permet d'effectuer 3 allers-retours, entre les points A et B.✅
+-	A chaque extrémité, A ou B, le chariot reste immobilisé 4 secondes pour chargement ou déchargement.✅
+-	Le moniteur série doit afficher en permanence les états du chariot ainsi que le nombre d'aller-retour effectués✅
 
 
 V3.1 objectifs :
