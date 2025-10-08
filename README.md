@@ -52,4 +52,4 @@ exemple : //======= Fonction SON_AB =======
 Sources :
 ----------------
 
-This site was built using [ledisrupteurdimensionnel.com](https://ledisrupteurdimensionnel.com/arduino/creer-des-sons-avec-arduino-buzzer/#sons_arduino).
+Ce projet a utilisée la ressource [ledisrupteurdimensionnel.com](https://ledisrupteurdimensionnel.com/arduino/creer-des-sons-avec-arduino-buzzer/#sons_arduino).
