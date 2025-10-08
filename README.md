@@ -48,3 +48,8 @@ Intégrer les 2 types de son dans 2 fonctions à placer en fin de programme, et 
 •	Fonction « son_FCY() » : pour le son lorsque le robot à fini son cycle.
 Mettre des commentaires dans votre programme pour séparer visuellement toutes les fonctions.</br>
 exemple : //======= Fonction SON_AB =======
+
+Sources :
+----------------
+
+This site was built using [ledisrupteurdimensionnel.com](https://ledisrupteurdimensionnel.com/arduino/creer-des-sons-avec-arduino-buzzer/#sons_arduino).
