@@ -52,5 +52,5 @@ exemple : //======= Fonction SON_AB =======
 Sources :
 ----------------
 
-Ce projet a utilisée la ressource [ledisrupteurdimensionnel.com](https://ledisrupteurdimensionnel.com/arduino/creer-des-sons-avec-arduino-buzzer/#sons_arduino).
+Ce projet a utilisée la ressource [ledisrupteurdimensionnel.com](https://ledisrupteurdimensionnel.com/arduino/creer-des-sons-avec-arduino-buzzer/#sons_arduino).</br>
 Ce projet a utilisée la ressource [www.mon-club-elec.fr](https://web.archive.org/web/20211209095312/http://www.mon-club-elec.fr/pmwiki_reference_arduino/pmwiki.php?n=Main.Tone).
