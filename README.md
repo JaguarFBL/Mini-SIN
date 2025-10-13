@@ -37,8 +37,8 @@ V3.1 objectifs :
 ----------------
 
 Compléter votre programme V3.1 pour que :
-•	SON_AB : Lorsque le robot arrive A ou point B, il émet 2 bips de fréquence 440Hz à une fréquence de 1 Hz
-•	SON_FCY : Lorsque le robot a fini un cycle, il émet 3 bips de fréquence 880 Hz à une fréquence de 1 Hz
+•	SON_AB : Lorsque le robot arrive A ou point B, il émet 2 bips de fréquence 440Hz à une fréquence de 1 Hz✅
+•	SON_FCY : Lorsque le robot a fini un cycle, il émet 3 bips de fréquence 880 Hz à une fréquence de 1 Hz✅
 
 V3.2 objectifs :
 ----------------
