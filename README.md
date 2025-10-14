@@ -44,7 +44,7 @@ V3.2 objectifs :
 ----------------
 
 Intégrer les 2 types de son dans 2 fonctions à placer en fin de programme, et les appeler dans votre programme V3.2 :
-•	Fonction « son_AB() » : pour le son lorsque le robot arrive au point A ou B.✅
+•	Fonction « son_AB() » : pour le son lorsque le robot arrive au point A ou B.✅</br>
 •	Fonction « son_FCY() » : pour le son lorsque le robot à fini son cycle.✅
 Mettre des commentaires dans votre programme pour séparer visuellement toutes les fonctions.</br>
 exemple : //======= Fonction SON_AB =======
