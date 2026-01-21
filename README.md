@@ -59,14 +59,16 @@ Ce projet a utilisée les ressources : </br>
 <br>
 <br>
 
+
+
 # SIN 2 ( le retour )  
 Consignes générales :
 --------------
 Le responsable d’une unité de conditionnement souhaite optimiser les temps de productions, afin de déplacer les pièces à assembler du magasin B au poste de montage A auprès de l’opérateur, un système de convoyage automatisé est étudié. Un affichage permet à chacun de connaître la position d’un chariot suivant l’avancement dans le cycle.
-Vous allez développer le programme pour que notre robot puisse :
-•	Se déplacer de manière automatique pour récupérer des pièces au point B et revenir au point A
-•	Afficher l’état dans lequel est le robot sur un afficheur LCD
-•	Indiquer sa position par un signal sonore
+Vous allez développer le programme pour que notre robot puisse :<br>
+•	Se déplacer de manière automatique pour récupérer des pièces au point B et revenir au point A<br>
+•	Afficher l’état dans lequel est le robot sur un afficheur LCD<br>
+•	Indiquer sa position par un signal sonore<br>
 Le chariot doit se déplacer entre les deux points A et B. Les positions A et B peuvent être détectées par 2 capteurs TOR fin de course fcg et fcd. Un bouton départ cycle dcy permet à l’opérateur de lancer un cycle de fonctionnement.
 Vous utiliserez 3 boutons poussoirs afin de simuler ses capteurs logiques.
 Dans la phase d’étude sous Proteus et sur les cartes Arduino, les actions de déplacement seront simulées par 2 leds : ledav (avant) et ledar (arrière).
