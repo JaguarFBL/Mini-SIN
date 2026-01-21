@@ -1,4 +1,4 @@
-# SIN 1
+# Mini-SIN 1
 Consignes générales :
 --------------
 Toutes vos travaux  doivent faire l’objet d’un compte rendu  rédigé et sauvegardé dans un dossier par binôme. Les différentes  versions de  vos projets Proteus seront identifiées et sauvegardées dans un dossier dans vos espaces personnels et remis dans le devoir sous Teams.
@@ -61,7 +61,7 @@ Ce projet a utilisée les ressources : </br>
 
 
 
-# SIN 2 ( le retour )  
+# Mini-SIN 2 ( le retour )  
 Consignes générales :
 --------------
 Le responsable d’une unité de conditionnement souhaite optimiser les temps de productions, afin de déplacer les pièces à assembler du magasin B au poste de montage A auprès de l’opérateur, un système de convoyage automatisé est étudié. Un affichage permet à chacun de connaître la position d’un chariot suivant l’avancement dans le cycle.
