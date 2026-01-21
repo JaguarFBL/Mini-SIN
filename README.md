@@ -54,7 +54,7 @@ Sources :
 
 Ce projet a utilisée les ressources : </br>
 - [ledisrupteurdimensionnel.com](https://ledisrupteurdimensionnel.com/arduino/creer-des-sons-avec-arduino-buzzer/#sons_arduino).</br>
-- [www.mon-club-elec.fr](https://web.archive.org/web/20211209095312/http://www.mon-club-elec.fr/pmwiki_reference_arduino/pmwiki.php?n=Main.Tone).
+- [www.mon-club-elec.fr](https://web.archive.org/web/20211209095312/http://www.mon-club-elec.fr/pmwiki_reference_arduino/pmwiki.php?n=Main.Tone).  
 
 
 # SIN 2 ( le retour )  
