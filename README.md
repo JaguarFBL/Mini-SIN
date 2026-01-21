@@ -62,16 +62,15 @@ Ce projet a utilisée les ressources : </br>
 # SIN 2 ( le retour )  
 Consignes générales :
 --------------
-Toutes vos travaux  doivent faire l’objet d’un compte rendu  rédigé et sauvegardé dans un dossier par binôme. Les différentes  versions de  vos projets Proteus seront identifiées et sauvegardées dans un dossier dans vos espaces personnels et remis dans le devoir sous Teams.
-Merci de déposer un dossier zippé comprenant :
-Un compte rendu des activités réalisées en conservant le plan du document Word ci joint
-Chacun de vos projets Proteus renommé avec sa version 
-V1: 1 cycle de convoyage
-V2: 3 cycles de convoyages
-V3.1 : Intégration de sons 
-V3.2: création de fonctions
+Le responsable d’une unité de conditionnement souhaite optimiser les temps de productions, afin de déplacer les pièces à assembler du magasin B au poste de montage A auprès de l’opérateur, un système de convoyage automatisé est étudié. Un affichage permet à chacun de connaître la position d’un chariot suivant l’avancement dans le cycle.
+Vous allez développer le programme pour que notre robot puisse :
+•	Se déplacer de manière automatique pour récupérer des pièces au point B et revenir au point A
+•	Afficher l’état dans lequel est le robot sur un afficheur LCD
+•	Indiquer sa position par un signal sonore
+Le chariot doit se déplacer entre les deux points A et B. Les positions A et B peuvent être détectées par 2 capteurs TOR fin de course fcg et fcd. Un bouton départ cycle dcy permet à l’opérateur de lancer un cycle de fonctionnement.
+Vous utiliserez 3 boutons poussoirs afin de simuler ses capteurs logiques.
+Dans la phase d’étude sous Proteus et sur les cartes Arduino, les actions de déplacement seront simulées par 2 leds : ledav (avant) et ledar (arrière).
 
-Veiller à  réutiliser parfaitement le vocabulaire technique utilisé dans l’énoncé.
 
 Entrée/Sortie :
 --------------
