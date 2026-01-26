@@ -76,7 +76,7 @@ Sources :
 Ce projet a utilisée les ressources : </br>
 - [ledisrupteurdimensionnel.com](https://ledisrupteurdimensionnel.com/arduino/creer-des-sons-avec-arduino-buzzer/#sons_arduino).</br>
 - [www.mon-club-elec.fr](https://web.archive.org/web/20211209095312/http://www.mon-club-elec.fr/pmwiki_reference_arduino/pmwiki.php?n=Main.Tone).<br>
-- [www.wiki.seeedstudio.com]([https://web.archive.org/web/20211209095312/http://www.mon-club-elec.fr/pmwiki_reference_arduino/pmwiki.php?n=Main.Tone](https://wiki.seeedstudio.com/Grove-LCD_RGB_Backlight/)).<br>
+- [www.wiki.seeedstudio.com](https://wiki.seeedstudio.com/Grove-LCD_RGB_Backlight/).<br>
 <br>
 <br>
 <br>
