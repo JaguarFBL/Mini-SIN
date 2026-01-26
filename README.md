@@ -49,16 +49,6 @@ Intégrer les 2 types de son dans 2 fonctions à placer en fin de programme, et 
 Mettre des commentaires dans votre programme pour séparer visuellement toutes les fonctions.</br>
 exemple : //======= Fonction SON_AB =======
 
-Sources :
-----------------
-
-Ce projet a utilisée les ressources : </br>
-- [ledisrupteurdimensionnel.com](https://ledisrupteurdimensionnel.com/arduino/creer-des-sons-avec-arduino-buzzer/#sons_arduino).</br>
-- [www.mon-club-elec.fr](https://web.archive.org/web/20211209095312/http://www.mon-club-elec.fr/pmwiki_reference_arduino/pmwiki.php?n=Main.Tone).<br>
-<br>
-<br>
-<br>
-
 
 
 # Mini-SIN 2 ( le retour )  
@@ -78,7 +68,19 @@ Vous utiliserez 3 boutons poussoirs afin de simuler ses capteurs logiques.
 Dans la phase d’étude sous Proteus et sur les cartes Arduino, les actions de déplacement seront simulées par 2 leds : ledav (avant) et ledar (arrière).<br>
 <br>
 
-Rajout de l'affichage du nombre de tour avec un afficheur led 4 chiffres
+Rajout de l'affichage du nombre de tour avec un afficheur led 4 chiffres<br>
+<br>
+Sources :
+----------------
+
+Ce projet a utilisée les ressources : </br>
+- [ledisrupteurdimensionnel.com](https://ledisrupteurdimensionnel.com/arduino/creer-des-sons-avec-arduino-buzzer/#sons_arduino).</br>
+- [www.mon-club-elec.fr](https://web.archive.org/web/20211209095312/http://www.mon-club-elec.fr/pmwiki_reference_arduino/pmwiki.php?n=Main.Tone).<br>
+- [www.wiki.seeedstudio.com]([https://web.archive.org/web/20211209095312/http://www.mon-club-elec.fr/pmwiki_reference_arduino/pmwiki.php?n=Main.Tone](https://wiki.seeedstudio.com/Grove-LCD_RGB_Backlight/)).<br>
+<br>
+<br>
+<br>
+
 
 
 
