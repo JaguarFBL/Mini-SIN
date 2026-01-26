@@ -75,7 +75,10 @@ Vous allez développer le programme pour que notre robot puisse :<br>
 <br>
 Le chariot doit se déplacer entre les deux points A et B. Les positions A et B peuvent être détectées par 2 capteurs TOR fin de course fcg et fcd. Un bouton départ cycle dcy permet à l’opérateur de lancer un cycle de fonctionnement.
 Vous utiliserez 3 boutons poussoirs afin de simuler ses capteurs logiques.
-Dans la phase d’étude sous Proteus et sur les cartes Arduino, les actions de déplacement seront simulées par 2 leds : ledav (avant) et ledar (arrière).
+Dans la phase d’étude sous Proteus et sur les cartes Arduino, les actions de déplacement seront simulées par 2 leds : ledav (avant) et ledar (arrière).<br>
+<br>
+
+Rajout de l'affichage du nombre de tour avec un afficheur led 4 chiffres
 
 
 
