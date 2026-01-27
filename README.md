@@ -53,7 +53,7 @@ exemple : //======= Fonction SON_AB =======
 
 # Mini-SIN 2 ( le retour )  
 Consignes générales :
---------------
+---------------------
 Le responsable d’une unité de conditionnement souhaite optimiser les temps de productions, afin de déplacer les pièces à assembler du magasin B au poste de montage A auprès de l’opérateur, un système de convoyage automatisé est étudié. Un affichage permet à chacun de connaître la position d’un chariot suivant l’avancement dans le cycle.
 Vous allez développer le programme pour que notre robot puisse :<br>
 <br>
@@ -75,7 +75,7 @@ Rajout de l'affichage de la température avec un afficheur led 4 chiffres ( Mini
 <br>
 <br>
 Sources :
-----------------
+---------
 
 Ce projet a utilisée les ressources : </br>
 - [ledisrupteurdimensionnel.com](https://ledisrupteurdimensionnel.com/arduino/creer-des-sons-avec-arduino-buzzer/#sons_arduino).</br>
