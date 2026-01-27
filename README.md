@@ -34,7 +34,7 @@ Contenu minimal :
 - Dossier `Mini_SIN 2 (le retour)/` contenant :
   - le sketch Arduino (.ino)
   - Dossier `Bibliothèque/` contenant toute les bibliothèques
-- `README_equipe.txt` : noms, logins, rôle de chacun
+- `README.txt` : noms, logins, rôle de chacun
 
 
 Checklist de dépôt :
