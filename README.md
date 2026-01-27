@@ -51,7 +51,7 @@ exemple : //======= Fonction SON_AB =======
 
 
 
-# Mini-SIN 2 ( le retour )  
+# Mini-SIN 2 ( le retour )
 Consignes générales :
 ---------------------
 Le responsable d’une unité de conditionnement souhaite optimiser les temps de productions, afin de déplacer les pièces à assembler du magasin B au poste de montage A auprès de l’opérateur, un système de convoyage automatisé est étudié. Un affichage permet à chacun de connaître la position d’un chariot suivant l’avancement dans le cycle.
