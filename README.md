@@ -30,13 +30,14 @@ Langage principal : C++ (sketches Arduino)
 Nom recommandé du zip : `GroupeX_Mini-SIN_vN.zip` (ex. `Groupe3_Mini-SIN_v2.zip`)
 
 Contenu minimal :
-- `CompteRendu.docx` ou `CompteRendu.pdf` (plan fourni)
-- Dossier `V1/` et/ou `V2/` contenant :
+- Dossier `Mini_SIN 1/` contenant :
   - le sketch Arduino (.ino)
   - le projet Proteus ou capture d’écran du câblage
-  - tout fichier binaire ou ressource nécessaire
+- Dossier `Mini_SIN 2 (le retour)/` contenant :
+  - le sketch Arduino (.ino)
+  - Dossier `Bibliothèque/` contenant toute les bibliothèques
 - `README_equipe.txt` : noms, logins, rôle de chacun
-- (optionnel) `diagramme_pinout.png`
+
 
 Checklist de dépôt :
 - [ ] Compte rendu complet
