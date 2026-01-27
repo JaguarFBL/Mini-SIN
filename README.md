@@ -118,5 +118,5 @@ Liens originaux :
 
 ## Remarques finales / Suggestions
 - Corriger les fautes et supprimer les balises HTML inutiles.  
-- Ajouter un schéma de câblage (image) ou un fichier Proteus clair pour aider la correction.  
-- Ajouter un petit exemple de code minimal dans `examples/` pour démarrer rapidement.
+- Ajouter un schéma de câblage (vidéo) ou un fichier Proteus clair pour aider la correction.  
+
