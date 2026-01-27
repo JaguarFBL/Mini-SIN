@@ -67,9 +67,11 @@ Le chariot doit se déplacer entre les deux points A et B. Les positions A et B 
 Vous utiliserez 3 boutons poussoirs afin de simuler ses capteurs logiques.
 Dans la phase d’étude sous Proteus et sur les cartes Arduino, les actions de déplacement seront simulées par 2 leds : ledav (avant) et ledar (arrière).<br>
 <br>
-
-Rajout de l'affichage du nombre de tour avec un afficheur led 4 chiffres<br>
+Bonus :
+-------
+Rajout de l'affichage du nombre de tour avec un afficheur led 4 chiffres ( Mini_SIN_Arduino_V1 )<br>
 <br>
+Rajout de l'affichage de la température avec un afficheur led 4 chiffres ( Mini_SIN_Arduino_V2 )<br>
 <br>
 <br>
 Sources :
