@@ -120,13 +120,6 @@ Exemple LCD / TM1637 (V2) :
 
 ---
 
-## Critères d’évaluation (proposition)
-- Fonctionnalité : 50% (V1 : 1 cycle fonctionnel ; V2 : LCD + compteur + capteur OK)
-- Qualité du code : 20% (commentaires, fonctions, lisibilité)
-- Rapport / documentation : 20% (compte rendu clair, schémas)
-- Bonus : 10% (affichage 4 digits, mesure température, code non bloquant)
-
----
 
 ## Dépannage / erreurs fréquentes
 - Le code ne compile pas : vérifie les bibliothèques (rgb_lcd, TM1637, DallasTemperature, OneWire).
@@ -144,9 +137,4 @@ Exemple LCD / TM1637 (V2) :
 
 ---
 
-## Prochaine étape — veux‑tu que je :
-- a) Remplace directement le README du dépôt par cette version (je peux proposer le commit),  
-- b) Ajoute un exemple de sketch V1 corrigé (débounce, pin constants),  
-- c) Convertisse V2 pour utiliser millis() au lieu de delays (non bloquant) ?
 
-Indique la lettre de ta préférence et j’agis en conséquence.
