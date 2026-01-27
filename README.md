@@ -20,8 +20,6 @@ Langage principal : C++ (sketches Arduino)
 ## Organisation du dépôt
 - `V1/` — code et fichiers Proteus pour la version 1 (simple)
 - `V2/` — code et fichiers Proteus pour la version 2 (LCD, capteur de température, TM1637)
-- `docs/` — consignes, compte rendu modèle, schémas de câblage (à compléter)
-- `examples/` — exemples d’INO (si fournis)
 - `README.md` — ce fichier
 
 ---
