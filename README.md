@@ -1,92 +1,122 @@
-# Mini-SIN 1
-Consignes générales :
---------------
-Toutes vos travaux  doivent faire l’objet d’un compte rendu  rédigé et sauvegardé dans un dossier par binôme. Les différentes  versions de  vos projets Proteus seront identifiées et sauvegardées dans un dossier dans vos espaces personnels et remis dans le devoir sous Teams.
-Merci de déposer un dossier zippé comprenant :
-Un compte rendu des activités réalisées en conservant le plan du document Word ci joint
-Chacun de vos projets Proteus renommé avec sa version 
-V1: 1 cycle de convoyage
-V2: 3 cycles de convoyages
-V3.1 : Intégration de sons 
-V3.2: création de fonctions
+# Mini-SIN
 
-Veiller à  réutiliser parfaitement le vocabulaire technique utilisé dans l’énoncé.
+## Introduction
+Ce dépôt contient les consignes et les éléments du projet Mini‑SIN, réalisé en binômes. Le but est de concevoir et tester un chariot automatisé (simulation Proteus et Arduino) qui circule entre deux points A et B, géré par des capteurs de fin de course et un bouton de départ.
 
-Entrée/Sortie :
---------------
+---
 
+## Table des matières
+- [Consignes générales](#consignes-générales)  
+- [Prérequis](#prérequis)  
+- [Livrables attendus](#livrables-attendus)  
+- [Descriptions des versions](#descriptions-des-versions)  
+- [Simulation / Exécution](#simulation--exécution)  
+- [Bonus](#bonus)  
+- [Sources et références](#sources-et-références)
 
-V1 objectifs :
---------------
+---
 
-Réaliser l’algorithme✅​, le programme chariot_V1 comprenant✅ :
--	Une gestion des déplacements par détection des points A et B avec les capteurs fcg et fcd simulés par deux boutons poussoirs✅​
--	Une immobilisation de 4 secondes au point B pour chargement avant un retour au point A.✅​
--	L’affichage permanent sur le moniteur série des différents états du chariot (chariot en position initiale, chariot en marche avant, chariot en marche arrière et chariot au point B)✅
+## Consignes générales
+- Travail en binôme. Rédiger un compte rendu (format Word ou PDF) et le sauvegarder dans un dossier par binôme.
+- Déposer un dossier zippé contenant :
+  - Le compte rendu des activités (suivre le plan du document fourni).
+  - Chaque projet Proteus, renommé avec sa version (voir ci‑dessous).
+  - Tout code Arduino utilisé.
+- Utiliser le vocabulaire technique de l’énoncé.
 
-V2 objectifs :
---------------
+---
 
-Compléter votre programme V2 pour que : 
--	Le chariot étant au point A, une impulsion sur le bouton poussoir DCY permet d'effectuer 3 allers-retours, entre les points A et B.✅
--	A chaque extrémité, A ou B, le chariot reste immobilisé 4 secondes pour chargement ou déchargement.✅
--	Le moniteur série doit afficher en permanence les états du chariot ainsi que le nombre d'aller-retour effectués✅
+## Prérequis
+- Arduino IDE (version recommandée : préciser si nécessaire)  
+- Proteus (version recommandée)  
+- Accès aux bibliothèques Grove (si affichage Grove utilisé)  
+- Buzzer / LED / afficheur 4 chiffres (pour les tests matériels, optionnel en simulation)
 
+---
 
-V3.1 objectifs :
-----------------
+## Livrables attendus
+Nom du fichier zip recommandé : `GroupeX_Mini-SIN_vN.zip`  
+Contenu minimal du zip :
+- `CompteRendu.docx` ou `CompteRendu.pdf`
+- `Proteus/` (projets Proteus, fichiers .PSD/.PRO ou similaires)
+- `Arduino/` (fichiers .ino, bibliothèques utilisées)
+- `README_equipe.txt` (nom des membres, login, date)
 
-Compléter votre programme V3.1 pour que :
-•	SON_AB : Lorsque le robot arrive A ou point B, il émet 2 bips de fréquence 440Hz à une fréquence de 1 Hz✅
-•	SON_FCY : Lorsque le robot a fini un cycle, il émet 3 bips de fréquence 880 Hz à une fréquence de 1 Hz✅
+Checklist de dépôt :
+- [ ] Compte rendu présent
+- [ ] Projet Proteus(s) avec version correctement nommée
+- [ ] Code Arduino commenté (fonctions clairement séparées)
+- [ ] Instructions pour exécuter la simulation
 
-V3.2 objectifs :
-----------------
+---
 
-Intégrer les 2 types de son dans 2 fonctions à placer en fin de programme, et les appeler dans votre programme V3.2 :
-•	Fonction « son_AB() » : pour le son lorsque le robot arrive au point A ou B.✅</br>
-•	Fonction « son_FCY() » : pour le son lorsque le robot à fini son cycle.✅</br>
-Mettre des commentaires dans votre programme pour séparer visuellement toutes les fonctions.</br>
-exemple : //======= Fonction SON_AB =======
+## Descriptions des versions
+V1 — 1 cycle de convoyage
+- Gestion des déplacements par détection des points A et B (capteurs fcg et fcd simulés par boutons poussoirs).
+- Immobilisation de 4 secondes au point B pour chargement puis retour vers A.
+- Affichage permanent sur le moniteur série des états (position initiale, marche avant, marche arrière, au point B).
 
+V2 — 3 cycles de convoyage
+- Depuis A, une impulsion sur le bouton DCY déclenche 3 allers-retours entre A et B.
+- À chaque extrémité (A ou B), immobilisation de 4 secondes.
+- Moniteur série affichant les états et le nombre d’allers‑retours effectués.
 
+V3.1 — Sons
+- SON_AB : à l’arrivée en A ou B, le robot émet 2 bips (440 Hz) à 1 Hz.
+- SON_FCY : à la fin d’un cycle, le robot émet 3 bips (880 Hz) à 1 Hz.
 
-# Mini-SIN 2 ( le retour )
-Consignes générales :
----------------------
-Le responsable d’une unité de conditionnement souhaite optimiser les temps de productions, afin de déplacer les pièces à assembler du magasin B au poste de montage A auprès de l’opérateur, un système de convoyage automatisé est étudié. Un affichage permet à chacun de connaître la position d’un chariot suivant l’avancement dans le cycle.
-Vous allez développer le programme pour que notre robot puisse :<br>
-<br>
--  Se déplacer de manière automatique pour récupérer des pièces au point B et revenir au point A ✅<br>
-<br>
--	 Afficher l’état dans lequel est le robot sur un afficheur LCD ✅<br>
-<br>
--  Indiquer sa position par un signal sonore ✅<br>
-<br>
-Le chariot doit se déplacer entre les deux points A et B. Les positions A et B peuvent être détectées par 2 capteurs TOR fin de course fcg et fcd. Un bouton départ cycle dcy permet à l’opérateur de lancer un cycle de fonctionnement.
-Vous utiliserez 3 boutons poussoirs afin de simuler ses capteurs logiques.
-Dans la phase d’étude sous Proteus et sur les cartes Arduino, les actions de déplacement seront simulées par 2 leds : ledav (avant) et ledar (arrière).<br>
-<br>
-Bonus :
--------
-Rajout de l'affichage du nombre de tour avec un afficheur led 4 chiffres ( Mini_SIN_Arduino_V1 )<br>
-<br>
-Rajout de l'affichage de la température avec un afficheur led 4 chiffres ( Mini_SIN_Arduino_V2 )<br>
-<br>
-<br>
-Sources :
----------
+V3.2 — Fonctions
+- Intégrer les deux sons dans des fonctions séparées à placer en fin de programme :
+  - `son_AB()`
+  - `son_FCY()`
+- Ajouter des commentaires pour séparer visuellement les fonctions (ex. `// ======= Fonction SON_AB =======`).
 
-Ce projet a utilisée les ressources : </br>
-- [ledisrupteurdimensionnel.com](https://ledisrupteurdimensionnel.com/arduino/creer-des-sons-avec-arduino-buzzer/#sons_arduino).</br>
-- [www.mon-club-elec.fr](https://web.archive.org/web/20211209095312/http://www.mon-club-elec.fr/pmwiki_reference_arduino/pmwiki.php?n=Main.Tone).<br>
-- [Grove-4-Digit_Display](https://wiki.seeedstudio.com/Grove-LCD_RGB_Backlight/).<br>
-- [Grove-LCD_RGB_Backligh](https://wiki.seeedstudio.com/Grove-4-Digit_Display/).<br>
+---
 
-<br>
-<br>
-<br>
+## Simulation / Exécution
+- Les capteurs fin de course (fcg, fcd) et le bouton DCY sont simulés par des boutons poussoirs.
+- Les mouvements sont simulés par deux LEDs : `ledav` (avant) et `ledar` (arrière).
+- Le moniteur série doit afficher en permanence :
+  - État courant (ex. "Position initiale", "Marche avant", "Au point B", etc.)
+  - Compteur d’allers-retours (pour V2+)
 
+Exemple d’affichage série attendu (extrait) :
+```
+Position initiale
+Départ : cycle 1/3
+Marche avant...
+Arrivé au point B
+Chargement 4s
+Marche arrière...
+Arrivé au point A
+Fin du cycle 1/3
+```
 
+(pinout / schéma) — À ajouter : indiquer ici les pins Arduino utilisés pour fcg, fcd, DCY, ledav, ledar, buzzer, afficheur.
 
+---
 
+## Bonus
+- Affichage du nombre de tours sur un afficheur 4 chiffres (Mini_SIN_Arduino_V1).
+- Affichage de la température sur afficheur 4 chiffres (Mini_SIN_Arduino_V2).
+Préciser si ces bonus sont évalués et comment les soumettre.
+
+---
+
+## Sources et références
+- Créer des sons avec Arduino (buzzer) — ledisrupteurdimensionnel.com  
+- Reference Tone Arduino (archive) — mon-club-elec.fr  
+- Grove 4-Digit Display — SeeedStudio Wiki (Grove LCD / 4-digit)
+
+Liens originaux :
+- https://ledisrupteurdimensionnel.com/arduino/creer-des-sons-avec-arduino-buzzer/#sons_arduino
+- https://web.archive.org/web/20211209095312/http://www.mon-club-elec.fr/pmwiki_reference_arduino/pmwiki.php?n=Main.Tone
+- https://wiki.seeedstudio.com/Grove-LCD_RGB_Backlight/
+- https://wiki.seeedstudio.com/Grove-4-Digit_Display/
+
+---
+
+## Remarques finales / Suggestions
+- Corriger les fautes et supprimer les balises HTML inutiles.  
+- Ajouter un schéma de câblage (image) ou un fichier Proteus clair pour aider la correction.  
+- Ajouter un petit exemple de code minimal dans `examples/` pour démarrer rapidement.
