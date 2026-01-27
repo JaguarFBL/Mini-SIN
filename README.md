@@ -84,8 +84,6 @@ V2 (version avancée — LCD + TM1637 + DS18B20)
 - DS18B20 OneWire : D2
 - LCD : via la bibliothèque rgb_lcd (sérial I2C ou pins selon ton montage)
 
-Remarque : si tu utilises des boutons, privilégie `INPUT_PULLUP` et câblage au GND (appui = LOW) pour réduire le rebond. Ajuste les lectures dans le code selon ton câblage (active HIGH / LOW).
-
 ---
 
 ## Exemples d’affichages attendus
@@ -124,4 +122,4 @@ Exemple LCD / TM1637 (V2) :
 
 ---
 
-
+Louan/Estevan
