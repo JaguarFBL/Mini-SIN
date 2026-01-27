@@ -1,122 +1,152 @@
-# Mini-SIN
+# Mini‑SIN — Projet STI2D (Spécialité SIN)
 
-## Introduction
-Ce dépôt contient les consignes et les éléments du projet Mini‑SIN, réalisé en binômes. Le but est de concevoir et tester un chariot automatisé (simulation Proteus et Arduino) qui circule entre deux points A et B, géré par des capteurs de fin de course et un bouton de départ.
+Mini projet de STI2D — simulation Arduino / Proteus d’un chariot automatisé entre deux points A et B.  
+Ce dépôt contient deux versions du programme :
+- V1 : version de base (1 cycle — convoyage simple)
+- V2 : version avancée (afficheur LCD, sonde de température, afficheur 4 chiffres, compteur)
 
----
-
-## Table des matières
-- [Consignes générales](#consignes-générales)  
-- [Prérequis](#prérequis)  
-- [Livrables attendus](#livrables-attendus)  
-- [Descriptions des versions](#descriptions-des-versions)  
-- [Simulation / Exécution](#simulation--exécution)  
-- [Bonus](#bonus)  
-- [Sources et références](#sources-et-références)
+Langage principal : C++ (sketches Arduino)
 
 ---
 
-## Consignes générales
-- Travail en binôme. Rédiger un compte rendu (format Word ou PDF) et le sauvegarder dans un dossier par binôme.
-- Déposer un dossier zippé contenant :
-  - Le compte rendu des activités (suivre le plan du document fourni).
-  - Chaque projet Proteus, renommé avec sa version (voir ci‑dessous).
-  - Tout code Arduino utilisé.
-- Utiliser le vocabulaire technique de l’énoncé.
+## Objectifs pédagogiques
+- Concevoir l’algorithme de déplacement du chariot entre deux points (A ↔ B).
+- Savoir simuler des capteurs (boutons) et actionneurs (LEDs, buzzer) sous Proteus et sur Arduino.
+- Implémenter des retours utilisateurs : moniteur série, signaux sonores, afficheurs (LCD / 4 digits).
+- Structurer le code en versions (V1, V2) et en fonctions réutilisables.
 
 ---
 
-## Prérequis
-- Arduino IDE (version recommandée : préciser si nécessaire)  
-- Proteus (version recommandée)  
-- Accès aux bibliothèques Grove (si affichage Grove utilisé)  
-- Buzzer / LED / afficheur 4 chiffres (pour les tests matériels, optionnel en simulation)
+## Organisation du dépôt
+- `V1/` — code et fichiers Proteus pour la version 1 (simple)
+- `V2/` — code et fichiers Proteus pour la version 2 (LCD, capteur de température, TM1637)
+- `docs/` — consignes, compte rendu modèle, schémas de câblage (à compléter)
+- `examples/` — exemples d’INO (si fournis)
+- `README.md` — ce fichier
 
 ---
 
-## Livrables attendus
-Nom du fichier zip recommandé : `GroupeX_Mini-SIN_vN.zip`  
-Contenu minimal du zip :
-- `CompteRendu.docx` ou `CompteRendu.pdf`
-- `Proteus/` (projets Proteus, fichiers .PSD/.PRO ou similaires)
-- `Arduino/` (fichiers .ino, bibliothèques utilisées)
-- `README_equipe.txt` (nom des membres, login, date)
+## Consignes de rendu (format attendu)
+Nom recommandé du zip : `GroupeX_Mini-SIN_vN.zip` (ex. `Groupe3_Mini-SIN_v2.zip`)
+
+Contenu minimal :
+- `CompteRendu.docx` ou `CompteRendu.pdf` (plan fourni)
+- Dossier `V1/` et/ou `V2/` contenant :
+  - le sketch Arduino (.ino)
+  - le projet Proteus ou capture d’écran du câblage
+  - tout fichier binaire ou ressource nécessaire
+- `README_equipe.txt` : noms, logins, rôle de chacun
+- (optionnel) `diagramme_pinout.png`
 
 Checklist de dépôt :
-- [ ] Compte rendu présent
-- [ ] Projet Proteus(s) avec version correctement nommée
-- [ ] Code Arduino commenté (fonctions clairement séparées)
-- [ ] Instructions pour exécuter la simulation
+- [ ] Compte rendu complet
+- [ ] Projet Proteus fonctionnel
+- [ ] Code commenté (fonctions séparées: son_AB(), son_DCY(), ...)
+- [ ] Indication claire de la version soumise (V1 / V2)
 
 ---
 
-## Descriptions des versions
-V1 — 1 cycle de convoyage
-- Gestion des déplacements par détection des points A et B (capteurs fcg et fcd simulés par boutons poussoirs).
-- Immobilisation de 4 secondes au point B pour chargement puis retour vers A.
-- Affichage permanent sur le moniteur série des états (position initiale, marche avant, marche arrière, au point B).
+## Résumé des versions (attentes fonctionnelles)
 
-V2 — 3 cycles de convoyage
-- Depuis A, une impulsion sur le bouton DCY déclenche 3 allers-retours entre A et B.
-- À chaque extrémité (A ou B), immobilisation de 4 secondes.
-- Moniteur série affichant les états et le nombre d’allers‑retours effectués.
+V1 — Objectifs
+- 1 cycle de convoyage A → B → A.
+- Détection des positions par deux capteurs (fcg / fcd) simulés par des boutons.
+- Immobilisation 4 s au point B pour chargement.
+- Affichage permanent sur moniteur série des états (position initiale, marche avant, marche arrière, point B).
 
-V3.1 — Sons
-- SON_AB : à l’arrivée en A ou B, le robot émet 2 bips (440 Hz) à 1 Hz.
-- SON_FCY : à la fin d’un cycle, le robot émet 3 bips (880 Hz) à 1 Hz.
-
-V3.2 — Fonctions
-- Intégrer les deux sons dans des fonctions séparées à placer en fin de programme :
-  - `son_AB()`
-  - `son_FCY()`
-- Ajouter des commentaires pour séparer visuellement les fonctions (ex. `// ======= Fonction SON_AB =======`).
+V2 — Objectifs
+- Même fonctionnement que V1 mais avec :
+  - Déploiement sur afficheur LCD (rgb_lcd).
+  - Affichage du nombre de tours sur afficheur 4 chiffres (TM1637).
+  - Mesure de la température (sonde DS18B20) et affichage éventuel.
+  - Signaux sonores pour événements (arrivée A/B et fin de cycle).
 
 ---
 
-## Simulation / Exécution
-- Les capteurs fin de course (fcg, fcd) et le bouton DCY sont simulés par des boutons poussoirs.
-- Les mouvements sont simulés par deux LEDs : `ledav` (avant) et `ledar` (arrière).
-- Le moniteur série doit afficher en permanence :
-  - État courant (ex. "Position initiale", "Marche avant", "Au point B", etc.)
-  - Compteur d’allers-retours (pour V2+)
+## Pinouts (tels qu’utilisés dans les deux sketches fournis)
 
-Exemple d’affichage série attendu (extrait) :
+V1 (fichier initial — version basique)
+- LEDAV (avant) : D2
+- LEDAR (arrière): D3
+- DCY (bouton départ) : D4
+- FCG (fin course A) : D5
+- FCD (fin course B) : D6
+- BUZ (buzzer) : D10
+
+V2 (version avancée — LCD + TM1637 + DS18B20)
+- LEDAV : D9
+- LEDAR : D3
+- DCY : D4
+- FCG : D5
+- FCD : D6
+- BUZ : D10
+- TM1637 CLK : D7
+- TM1637 DIO : D8
+- DS18B20 OneWire : D2
+- LCD : via la bibliothèque rgb_lcd (sérial I2C ou pins selon ton montage)
+
+Remarque : si tu utilises des boutons, privilégie `INPUT_PULLUP` et câblage au GND (appui = LOW) pour réduire le rebond. Ajuste les lectures dans le code selon ton câblage (active HIGH / LOW).
+
+---
+
+## Exemples d’affichages attendus
+
+Exemple moniteur série (V1) :
 ```
 Position initiale
-Départ : cycle 1/3
-Marche avant...
+Démarrage en cours....
+Marche avant
 Arrivé au point B
 Chargement 4s
-Marche arrière...
+Marche arrière
 Arrivé au point A
-Fin du cycle 1/3
+Fin du cycle 1/1
 ```
 
-(pinout / schéma) — À ajouter : indiquer ici les pins Arduino utilisés pour fcg, fcd, DCY, ledav, ledar, buzzer, afficheur.
+Exemple LCD / TM1637 (V2) :
+- LCD : ligne 1 → "Marche avant", ligne 2 → "Temp: 24.3 C"
+- TM1637 : afficheur 0001 → nombre de tours
 
 ---
 
-## Bonus
-- Affichage du nombre de tours sur un afficheur 4 chiffres (Mini_SIN_Arduino_V1).
-- Affichage de la température sur afficheur 4 chiffres (Mini_SIN_Arduino_V2).
-Préciser si ces bonus sont évalués et comment les soumettre.
+## Bonnes pratiques et améliorations recommandées
+- Anti-rebond bouton : simple delay(50) après détection ou implémentation avec millis() pour robustesse.
+- Éviter les boucles while() bloquantes quand possible : préférez la gestion par machine à états + millis() pour temporisations non bloquantes (important si vous multipliez les capteurs/affichages).
+- Toujours éteindre l’autre LED quand vous activez une direction (éviter LEDs simultanées si non voulues).
+- Utiliser les constantes nommées pour les pins (déjà fait) — évite les magic numbers dans pinMode.
+- Utiliser BUZ constant dans tone(BUZ, ...) plutôt que 10 en dur.
+- Pour le TM1637, envoyer un entier (int) à displayNum; si vous avez un float température, formatez la valeur avant.
+- Séparer clairement les fonctions en fin de fichier (ex. // ======= Fonction SON_AB =======) comme demandé.
 
 ---
 
-## Sources et références
-- Créer des sons avec Arduino (buzzer) — ledisrupteurdimensionnel.com  
-- Reference Tone Arduino (archive) — mon-club-elec.fr  
-- Grove 4-Digit Display — SeeedStudio Wiki (Grove LCD / 4-digit)
-
-Liens originaux :
-- https://ledisrupteurdimensionnel.com/arduino/creer-des-sons-avec-arduino-buzzer/#sons_arduino
-- https://web.archive.org/web/20211209095312/http://www.mon-club-elec.fr/pmwiki_reference_arduino/pmwiki.php?n=Main.Tone
-- https://wiki.seeedstudio.com/Grove-LCD_RGB_Backlight/
-- https://wiki.seeedstudio.com/Grove-4-Digit_Display/
+## Critères d’évaluation (proposition)
+- Fonctionnalité : 50% (V1 : 1 cycle fonctionnel ; V2 : LCD + compteur + capteur OK)
+- Qualité du code : 20% (commentaires, fonctions, lisibilité)
+- Rapport / documentation : 20% (compte rendu clair, schémas)
+- Bonus : 10% (affichage 4 digits, mesure température, code non bloquant)
 
 ---
 
-## Remarques finales / Suggestions
-- Corriger les fautes et supprimer les balises HTML inutiles.  
-- Ajouter un schéma de câblage (vidéo) ou un fichier Proteus clair pour aider la correction.  
+## Dépannage / erreurs fréquentes
+- Le code ne compile pas : vérifie les bibliothèques (rgb_lcd, TM1637, DallasTemperature, OneWire).
+- Conflits de pins : évite d’utiliser la même pin pour plusieurs périphériques (ex. OneWire sur la même pin que LED dans V1).
+- Bouton qui déclenche plusieurs fois : ajouter debounce.
+- TM1637 affiche des valeurs étranges : vérifier conversion float→int et initialisation de la librairie.
 
+---
+
+## Références
+- Créer des sons avec Arduino (buzzer) — https://ledisrupteurdimensionnel.com/arduino/creer-des-sons-avec-arduino-buzzer/#sons_arduino
+- Tone Arduino (archive) — https://web.archive.org/web/20211209095312/http://www.mon-club-elec.fr/pmwiki_reference_arduino/pmwiki.php?n=Main.Tone
+- Grove 4-Digit Display / TM1637 — https://wiki.seeedstudio.com/Grove-4-Digit_Display/
+- DallasTemperature / OneWire — bibliothèques Arduino
+
+---
+
+## Prochaine étape — veux‑tu que je :
+- a) Remplace directement le README du dépôt par cette version (je peux proposer le commit),  
+- b) Ajoute un exemple de sketch V1 corrigé (débounce, pin constants),  
+- c) Convertisse V2 pour utiliser millis() au lieu de delays (non bloquant) ?
+
+Indique la lettre de ta préférence et j’agis en conséquence.
