@@ -108,18 +108,6 @@ Exemple LCD / TM1637 (V2) :
 
 ---
 
-## Bonnes pratiques et améliorations recommandées
-- Anti-rebond bouton : simple delay(50) après détection ou implémentation avec millis() pour robustesse.
-- Éviter les boucles while() bloquantes quand possible : préférez la gestion par machine à états + millis() pour temporisations non bloquantes (important si vous multipliez les capteurs/affichages).
-- Toujours éteindre l’autre LED quand vous activez une direction (éviter LEDs simultanées si non voulues).
-- Utiliser les constantes nommées pour les pins (déjà fait) — évite les magic numbers dans pinMode.
-- Utiliser BUZ constant dans tone(BUZ, ...) plutôt que 10 en dur.
-- Pour le TM1637, envoyer un entier (int) à displayNum; si vous avez un float température, formatez la valeur avant.
-- Séparer clairement les fonctions en fin de fichier (ex. // ======= Fonction SON_AB =======) comme demandé.
-
----
-
-
 ## Dépannage / erreurs fréquentes
 - Le code ne compile pas : vérifie les bibliothèques (rgb_lcd, TM1637, DallasTemperature, OneWire).
 - Conflits de pins : évite d’utiliser la même pin pour plusieurs périphériques (ex. OneWire sur la même pin que LED dans V1).
