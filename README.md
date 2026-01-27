@@ -122,8 +122,10 @@ Exemple LCD / TM1637 (V2) :
 
 ---
 
-Louan/Estevan
+Réalisé par :
+-------------
+<a href="https://github.com/JaguarFBL">Louan</a><br>
+<a href="https://github.com/EsteJAAJ">Estevan</a>
 
-https://github.com/EsteJAAJ
 
-https://github.com/JaguarFBL
+
