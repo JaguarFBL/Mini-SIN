@@ -123,3 +123,7 @@ Exemple LCD / TM1637 (V2) :
 ---
 
 Louan/Estevan
+
+https://github.com/EsteJAAJ
+
+https://github.com/JaguarFBL
